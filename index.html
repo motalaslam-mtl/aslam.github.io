@@ -434,13 +434,40 @@
       </div>
     </section>
 
-    <section>
-      <h2>Contact & Links</h2>
-      <p>
-        <a href="https://github.com/motalaslam-mtl/aslam.github.io" target="_blank">GitHub</a> •
-        <a href="https://www.linkedin.com/in/aslam-motala-180307335/" target="_blank">LinkedIn</a>
-      </p>
-    </section>
+   <section>
+  <h2>Contact & Links</h2>
+  <div class="contact-links">
+    <a href="https://github.com/motalaslam-mtl/aslam.github.io" target="_blank" class="contact-link-btn">GitHub</a>
+    <a href="https://www.linkedin.com/in/aslam-motala-180307335/" target="_blank" class="contact-link-btn">LinkedIn</a>
+    <a href="mailto:motalaslam@gmail.com" class="contact-link-btn">Email Me</a>
+  </div>
+</section>
+
+<style>
+.contact-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.contact-link-btn {
+  background-color: #1e3a8a; /* dark blue */
+  color: #fff;
+  text-decoration: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.contact-link-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #1e3a8a;
+  background-color: #3b5bbf; /* slightly lighter blue on hover */
+}
+</style>
+
 
     <footer>
       © Aslam Shokat Motala
