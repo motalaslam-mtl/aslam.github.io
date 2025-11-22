@@ -140,37 +140,92 @@
       </div>
     </section>
 
-   <section>
+  <section>
   <h2>Expertise</h2>
   <div class="skill-blocks">
     <!-- Block 1: Digital Marketing Tools -->
     <div class="skill-block">
       <h3>Digital Marketing Tools</h3>
-      <ul>
-        <li>Google Analytics</li>
-        <li>SEO</li>
-        <li>SEM</li>
-        <li>Power BI</li>
-        <li>Yoast SEO</li>
-        <li>WordPress</li>
-        <li>Shopify</li>
-        <li>Amazon FBA</li>
-      </ul>
+      <div class="skills-buttons">
+        <button>Google Analytics</button>
+        <button>SEO</button>
+        <button>SEM</button>
+        <button>Power BI</button>
+        <button>Yoast SEO</button>
+        <button>WordPress</button>
+        <button>Shopify</button>
+        <button>Amazon FBA</button>
+      </div>
     </div>
 
     <!-- Block 2: Retail & Customer Experience -->
     <div class="skill-block">
       <h3>Retail & Customer Experience</h3>
-      <ul>
-        <li>Customer Experience Optimization</li>
-        <li>Claims Management</li>
-        <li>Omni-channel Retail Operations</li>
-        <li>Inventory & Supply Chain Support</li>
-        <li>Process Improvement & Root Cause Analysis</li>
-      </ul>
+      <div class="skills-buttons">
+        <button>Customer Experience Optimization</button>
+        <button>Claims Management</button>
+        <button>Omni-channel Retail Operations</button>
+        <button>Inventory & Supply Chain Support</button>
+        <button>Process Improvement & Root Cause Analysis</button>
+      </div>
     </div>
   </div>
 </section>
+
+<style>
+  .skill-blocks {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+
+  .skill-block {
+    flex: 1 1 300px;
+    background-color: #2a2a2a;
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .skill-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px #39ff14; /* fluorescent glow */
+  }
+
+  .skill-block h3 {
+    color: #39ff14;
+    margin-bottom: 1rem;
+  }
+
+  .skills-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .skills-buttons button {
+    background-color: #333;
+    color: #ccc;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+  }
+
+  .skills-buttons button:hover {
+    background-color: #39ff14;
+    color: #111;
+    box-shadow: 0 0 8px #39ff14;
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 700px) {
+    .skill-blocks { flex-direction: column; }
+  }
+</style>
 
 
     <section>
