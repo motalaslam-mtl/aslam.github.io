@@ -333,6 +333,64 @@
       </div>
     </section>
 
+<section>
+  <h2>Education</h2>
+  <div class="education-blocks">
+    <div class="education-card">
+      <h3>Master's in Management Studies (Marketing)</h3>
+      <p>University of Mumbai | Aug 2017 – Jun 2019</p>
+    </div>
+    <div class="education-card">
+      <h3>Graduate Certificate in Information Technology Business Analysis</h3>
+      <p>Conestoga College | Jan 2020 – Apr 2021</p>
+    </div>
+    <div class="education-card">
+      <h3>Bachelor's in Computer Engineering</h3>
+      <p>Pune University | Aug 2012 – Jun 2016</p>
+    </div>
+  </div>
+</section>
+
+<style>
+.education-blocks { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 1rem; 
+  margin-top: 1rem; 
+}
+
+.education-card {
+  background-color: #2a2a2a;
+  padding: 1.2rem 1.5rem;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.education-card:hover { 
+  transform: translateY(-4px); 
+  box-shadow: 0 0 12px #39ff14; 
+}
+
+.education-card h3 { 
+  color: #39ff14; 
+  font-size: 1rem; 
+  margin-bottom: 0.3rem; 
+}
+
+.education-card p { 
+  color: #ccc; 
+  font-size: 0.85rem; 
+}
+
+@media (max-width: 700px) {
+  .education-blocks { flex-direction: column; }
+}
+</style>
+
+
+
+
+    
     <section>
       <h2>Projects</h2>
       <div class="projects-blocks">
