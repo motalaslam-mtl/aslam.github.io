@@ -54,44 +54,159 @@
       box-shadow: 0 0 10px var(--fluorescent);
     }
 
-    /* ----- PROJECTS ----- */
-    .projects { display: flex; flex-direction: column; gap: 1rem; }
-    .project {
-      background-color: var(--card-bg);
-      padding: 1rem;
-      border-radius: 8px;
-      transition: box-shadow 0.3s, transform 0.3s;
-    }
-    .project:hover {
-      box-shadow: 0 0 15px var(--fluorescent);
-      transform: translateY(-3px);
-    }
-    .project-tags span {
-      background: #333;
-      color: var(--fluorescent);
-      padding: 3px 6px;
-      margin-right: 6px;
-      border-radius: 4px;
-      font-size: 0.85em;
+    /* ----- SKILLS BLOCKS ----- */
+    .skill-blocks {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
     }
 
-    /* ----- SKILLS ----- */
-    .skills { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 8px; }
-    .skills span {
-      background: #333;
-      color: var(--fluorescent);
-      padding: 5px 10px;
-      border-radius: 5px;
-      transition: box-shadow 0.2s;
+    .skill-block {
+      flex: 1 1 300px;
+      background-color: #2a2a2a;
+      padding: 1.5rem;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
-    .skills span:hover { box-shadow: 0 0 10px var(--fluorescent); }
+
+    .skill-block:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px #39ff14; /* fluorescent glow */
+    }
+
+    .skill-block h3 {
+      color: #39ff14;
+      margin-bottom: 1rem;
+    }
+
+    .skills-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skills-buttons button {
+      background-color: #333;
+      color: #ccc;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+
+    .skills-buttons button:hover {
+      background-color: #39ff14;
+      color: #111;
+      box-shadow: 0 0 8px #39ff14;
+      transform: translateY(-2px);
+    }
+
+    /* ----- EXPERIENCE BLOCKS ----- */
+    .experience-blocks {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .experience-card {
+      background-color: #2a2a2a;
+      padding: 1.5rem;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .experience-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 12px #39ff14;
+    }
+
+    .experience-card h3 {
+      color: #39ff14;
+      margin-bottom: 0.4rem;
+      font-size: 1.1rem;
+    }
+
+    .experience-date {
+      color: #ccc;
+      font-size: 0.85rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .experience-card ul {
+      padding-left: 1.2rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .experience-card ul li {
+      margin-bottom: 0.4rem;
+      color: #eee;
+      font-size: 0.95rem;
+    }
+
+    .experience-skills button {
+      background-color: #ffa733;
+      color: #111;
+      border: none;
+      border-radius: 5px;
+      padding: 0.4rem 0.8rem;
+      margin: 0.2rem;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .experience-skills button:hover {
+      background-color: #ffb84d;
+    }
+
+    /* ----- PROJECTS ----- */
+    .projects-blocks {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem; /* same gap as experience blocks */
+      margin-top: 1rem;
+    }
+
+    .project {
+      background-color: var(--card-bg);
+      padding: 1.5rem; /* same padding as experience */
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 12px var(--fluorescent);
+    }
+
+    .project-tags span {
+      display: inline-block;
+      background-color: #87ceeb; /* Sky blue */
+      color: #111;
+      padding: 4px 8px;
+      margin: 4px 6px 4px 0;
+      border-radius: 5px;
+      font-size: 0.85em;
+      cursor: default;
+      transition: background-color 0.2s;
+    }
+
+    .project-tags span:hover {
+      background-color: #00bfff;
+    }
 
     /* ----- FOOTER ----- */
     footer { text-align: center; margin-top: 3rem; font-size: 0.9em; color: #777; }
 
     /* ----- RESPONSIVE ----- */
-    @media (max-width: 600px) {
-      .projects { flex-direction: column; }
+    @media (max-width: 700px) {
+      .skill-blocks { flex-direction: column; }
+      .experience-blocks { gap: 0.8rem; }
+      .projects-blocks { gap: 0.8rem; }
     }
   </style>
 </head>
@@ -111,305 +226,150 @@
       </p>
     </section>
 
+    <section>
+      <h2>Expertise</h2>
+      <div class="skill-blocks">
+        <!-- Block 1: Digital Marketing Tools -->
+        <div class="skill-block">
+          <h3>Digital Marketing Tools</h3>
+          <div class="skills-buttons">
+            <button>Google Analytics</button>
+            <button>SEO</button>
+            <button>SEM</button>
+            <button>Power BI</button>
+            <button>Yoast SEO</button>
+            <button>WordPress</button>
+            <button>Shopify</button>
+            <button>Amazon FBA</button>
+          </div>
+        </div>
 
-<section>
-  <h2>Expertise</h2>
-  <div class="skill-blocks">
-    <!-- Block 1: Digital Marketing Tools -->
-    <div class="skill-block">
-      <h3>Digital Marketing Tools</h3>
-      <div class="skills-buttons">
-        <button>Google Analytics</button>
-        <button>SEO</button>
-        <button>SEM</button>
-        <button>Power BI</button>
-        <button>Yoast SEO</button>
-        <button>WordPress</button>
-        <button>Shopify</button>
-        <button>Amazon FBA</button>
+        <!-- Block 2: Retail & Customer Experience -->
+        <div class="skill-block">
+          <h3>Retail & Customer Experience</h3>
+          <div class="skills-buttons">
+            <button>Customer Experience Optimization</button>
+            <button>Claims Management</button>
+            <button>Omni-channel Retail Operations</button>
+            <button>Inventory & Supply Chain Support</button>
+            <button>Process Improvement & Root Cause Analysis</button>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <!-- Block 2: Retail & Customer Experience -->
-    <div class="skill-block">
-      <h3>Retail & Customer Experience</h3>
-      <div class="skills-buttons">
-        <button>Customer Experience Optimization</button>
-        <button>Claims Management</button>
-        <button>Omni-channel Retail Operations</button>
-        <button>Inventory & Supply Chain Support</button>
-        <button>Process Improvement & Root Cause Analysis</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<style>
-  .skill-blocks {
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin-top: 1rem;
-  }
-
-  .skill-block {
-    flex: 1 1 300px;
-    background-color: #2a2a2a;
-    padding: 1.5rem;
-    border-radius: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-
-  .skill-block:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 15px #39ff14; /* fluorescent glow */
-  }
-
-  .skill-block h3 {
-    color: #39ff14;
-    margin-bottom: 1rem;
-  }
-
-  .skills-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  .skills-buttons button {
-    background-color: #333;
-    color: #ccc;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-  }
-
-  .skills-buttons button:hover {
-    background-color: #39ff14;
-    color: #111;
-    box-shadow: 0 0 8px #39ff14;
-    transform: translateY(-2px);
-  }
-
-  @media (max-width: 700px) {
-    .skill-blocks { flex-direction: column; }
-  }
-</style>
-
-
-
+    </section>
 
     <section>
-  <h2>Experience</h2>
-  <div class="experience-blocks">
-    <!-- Claims & Operations Specialist -->
-    <div class="experience-card">
-      <h3>Claims & Operations Specialist – Walmart Canada</h3>
-      <p class="experience-date">Mississauga, ON | Feb 2023 – Present</p>
-      <ul>
-        <li>Improve operational efficiency and data accuracy across supply chain and stores.</li>
-        <li>Analyze metrics to support inventory and process decisions.</li>
-        <li>Ensure compliance while enhancing customer experience.</li>
-      </ul>
-      <div class="experience-skills">
-        <button>Vendor RA Processing</button>
-        <button>Product Recalls Management</button>
-        <button>Inventory Management</button>
-        <button>Claims Processing</button>
-        <button>Data Entry Accuracy</button>
+      <h2>Experience</h2>
+      <div class="experience-blocks">
+        <!-- Claims & Operations Specialist -->
+        <div class="experience-card">
+          <h3>Claims & Operations Specialist – Walmart Canada</h3>
+          <p class="experience-date">Mississauga, ON | Feb 2023 – Present</p>
+          <ul>
+            <li>Improve operational efficiency and data accuracy across supply chain and stores.</li>
+            <li>Analyze metrics to support inventory and process decisions.</li>
+            <li>Ensure compliance while enhancing customer experience.</li>
+          </ul>
+          <div class="experience-skills">
+            <button>Vendor RA Processing</button>
+            <button>Product Recalls Management</button>
+            <button>Inventory Management</button>
+            <button>Claims Processing</button>
+            <button>Data Entry Accuracy</button>
+          </div>
+        </div>
+
+        <!-- Team Lead Manager -->
+        <div class="experience-card">
+          <h3>Team Lead Manager – Walmart Canada</h3>
+          <p class="experience-date">Guelph, ON | Mar 2022 – May 2023</p>
+          <ul>
+            <li>Led a team of 20+ associates to achieve sales and service goals.</li>
+            <li>Managed workflow improvements and retail initiatives.</li>
+            <li>Provided coaching to optimize team performance.</li>
+          </ul>
+          <div class="experience-skills">
+            <button>Visual Merchanadising</button>
+            <button>Modular Integrity</button>
+            <button>FTPR</button>
+            <button>NPS</button>
+            <button>Pre-Subs</button>
+          </div>
+        </div>
+
+        <!-- eCommerce Product Listing & Management -->
+        <div class="experience-card">
+          <h3>eCommerce Product Listing & Management – Self-Experience</h3>
+          <p class="experience-date">Canada | 2020 – Present</p>
+          <ul>
+            <li>Managed product listings on Amazon, Shopify, Etsy, GoDaddy.</li>
+            <li>Optimized content, pricing, and images for conversion.</li>
+            <li>Monitored performance and improved cross-channel consistency.</li>
+          </ul>
+          <div class="experience-skills">
+            <button>SEO</button>
+            <button>Shopify</button>
+            <button>Amazon FBA</button>
+            <button>WordPress</button>
+            <button>Google Trends</button>
+          </div>
+        </div>
+
+        <!-- Digital Marketing Intern -->
+        <div class="experience-card">
+          <h3>Digital Marketing Intern – Dines App</h3>
+          <p class="experience-date">London, UK | Apr 2018 – Jun 2018</p>
+          <ul>
+            <li>Supported SEO and digital marketing campaigns.</li>
+            <li>Analyzed engagement data to improve performance.</li>
+            <li>Contributed to marketing strategy for online visibility.</li>
+          </ul>
+          <div class="experience-skills">
+            <button>Google Trends</button>
+            <button>GT Metrix</button>
+            <button>Keyword Analysis</button>
+            <button>Banner Designing</button>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Team Lead Manager -->
-    <div class="experience-card">
-      <h3>Team Lead Manager – Walmart Canada</h3>
-      <p class="experience-date">Guelph, ON | Mar 2022 – May 2023</p>
-      <ul>
-        <li>Led a team of 20+ associates to achieve sales and service goals.</li>
-        <li>Managed workflow improvements and retail initiatives.</li>
-        <li>Provided coaching to optimize team performance.</li>
-      </ul>
-      <div class="experience-skills">
-        <button>Visual Merchanadising</button>
-        <button>Modular Integrity</button>
-        <button>FTPR</button>
-        <button>NPS</button>
-        <button>Pre-Subs</button>
+    <section>
+      <h2>Projects</h2>
+      <div class="projects-blocks">
+        <div class="project">
+          <h3>Lean Six Sigma Process Optimization</h3>
+          <p>Led a workflow improvement initiative that reduced errors and improved cycle efficiency.</p>
+          <div class="project-tags">
+            <span>Lean Six Sigma</span>
+            <span>Process Improvement</span>
+            <span>Analytics</span>
+          </div>
+        </div>
+
+        <div class="project">
+          <h3>Customer & B2B E-Commerce Analysis</h3>
+          <p>Analyzed behaviors on Amazon and Alibaba and developed insights to improve marketing effectiveness and retention strategies.</p>
+          <div class="project-tags">
+            <span>E-Commerce</span>
+            <span>Research</span>
+            <span>B2B Marketing</span>
+          </div>
+        </div>
+
+        <div class="project">
+          <h3>Digital Marketing Support – Dines App (Intern)</h3>
+          <p>Supported SEO and digital campaigns to increase online visibility and engagement during the internship period.</p>
+          <div class="project-tags">
+            <span>Keyword Analysis</span>
+            <span>Banner Designing</span>
+            <span>Market Research</span>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <!-- eCommerce Product Listing & Management -->
-    <div class="experience-card">
-      <h3>eCommerce Product Listing & Management – Self-Experience</h3>
-      <p class="experience-date">Canada | 2020 – Present</p>
-      <ul>
-        <li>Managed product listings on Amazon, Shopify, Etsy, GoDaddy.</li>
-        <li>Optimized content, pricing, and images for conversion.</li>
-        <li>Monitored performance and improved cross-channel consistency.</li>
-      </ul>
-      <div class="experience-skills">
-        <button>SEO</button>
-        <button>Shopify</button>
-        <button>Amazon FBA</button>
-        <button>WordPress</button>
-        <button>Google Trends</button>
-      </div>
-    </div>
-
-    <!-- Digital Marketing Intern -->
-    <div class="experience-card">
-      <h3>Digital Marketing Intern – Dines App</h3>
-      <p class="experience-date">London, UK | Apr 2018 – Jun 2018</p>
-      <ul>
-        <li>Supported SEO and digital marketing campaigns.</li>
-        <li>Analyzed engagement data to improve performance.</li>
-        <li>Contributed to marketing strategy for online visibility.</li>
-      </ul>
-      <div class="experience-skills">
-        <button>Google Trends</button>
-        <button>GT Metrix</button>
-        <button>Keyword Analysis</button>
-        <button>Banner Designing</button>
-        <button></button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<style>
-  .experience-blocks {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-
-  .experience-card {
-    background-color: #2a2a2a;
-    padding: 1.5rem;
-    border-radius: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-
-  .experience-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 0 12px #39ff14;
-  }
-
-  .experience-card h3 {
-    color: #39ff14;
-    margin-bottom: 0.4rem;
-    font-size: 1.1rem;
-  }
-
-  .experience-date {
-    color: #ccc;
-    font-size: 0.85rem;
-    margin-bottom: 0.8rem;
-  }
-
-  .experience-card ul {
-    padding-left: 1.2rem;
-    margin-bottom: 0.8rem;
-  }
-
-  .experience-card ul li {
-    margin-bottom: 0.4rem;
-    color: #eee;
-    font-size: 0.95rem;
-  }
-
-  /* Skill buttons */
-  .experience-skills button {
-    background-color: #ffa733;
-    color: #111;
-    border: none;
-    border-radius: 5px;
-    padding: 0.4rem 0.8rem;
-    margin: 0.2rem;
-    font-size: 0.85rem;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  }
-
-  .experience-skills button:hover {
-    background-color: #ffb84d;
-  }
-
-  @media (max-width: 700px) {
-    .experience-blocks { gap: 0.8rem; }
-  }
-</style>
-
-    
-
-    
- <section>
-  <h2>Projects</h2>
-  <div class="projects-blocks">
-    <div class="project">
-      <h3>Lean Six Sigma Process Optimization</h3>
-      <p>Led a workflow improvement initiative that reduced errors and improved cycle efficiency.</p>
-      <div class="project-tags">
-        <span>Lean Six Sigma</span>
-        <span>Process Improvement</span>
-        <span>Analytics</span>
-      </div>
-    </div>
-
-    <div class="project">
-      <h3>Customer & B2B E-Commerce Analysis</h3>
-      <p>Analyzed behaviors on Amazon and Alibaba and developed insights to improve marketing effectiveness and retention strategies.</p>
-      <div class="project-tags">
-        <span>E-Commerce</span>
-        <span>Research</span>
-        <span>B2B Marketing</span>
-      </div>
-    </div>
-
-    <div class="project">
-      <h3>Digital Marketing Support – Dines App (Intern)</h3>
-      <p>Supported SEO and digital campaigns to increase online visibility and engagement during the internship period.</p>
-      <div class="project-tags">
-        <span>Keyword Analysis</span>
-        <span>Banner Designing</span>
-        <span>Market Research</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<style>
-  /* Project tags/buttons */
-  .project-tags span {
-    display: inline-block;
-    background-color: #87ceeb; /* Sky blue */
-    color: #111; /* Text color */
-    padding: 4px 8px;
-    margin: 4px 6px 4px 0;
-    border-radius: 5px;
-    font-size: 0.85em;
-    cursor: default;
-    transition: background-color 0.2s;
-  }
-
-  .project-tags span:hover {
-    background-color: #00bfff; /* Darker sky blue on hover */
-  }
-
-
-
-  
-</style>
-
-
-
-  
-    
-      <section>
+    <section>
       <h2>Contact & Links</h2>
       <p>
         <a href="https://github.com/motalaslam-mtl/aslam.github.io" target="_blank">GitHub</a> •
